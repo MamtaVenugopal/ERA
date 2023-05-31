@@ -34,6 +34,7 @@ Along with function utils.py contains function for plotting the data.
 ## model.py
 
 This file contains the model used for predicting the MNIST dataset. The model summary is described below:
+```
 ----------------------------------------------------------------
         Layer (type)               Output Shape         Param #
 ================================================================
@@ -53,8 +54,10 @@ Forward/backward pass size (MB): 0.67
 Params size (MB): 2.26
 Estimated Total Size (MB): 2.94
 ----------------------------------------------------------------
+```
 This model has been built with 2 blocks of 2 convoluted layer followed by maxpooling and finally with two layers of fully 
 connected. 
+```
     def forward(self, x):
         x = F.relu(self.conv1(x), 2) # 28>26 | 1>3 | 1>1
         x = F.relu(F.max_pool2d(self.conv2(x), 2)) #26>24>12 | 3>5>6 | 1>1>2
@@ -64,6 +67,7 @@ connected.
         x = F.relu(self.fc1(x))
         x = self.fc2(x)
         return F.log_softmax(x, dim=1)
+```
 ## Results
 
 ![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/59d381fd-f0d1-4781-b9eb-cefc479d02a3)
