@@ -1,4 +1,4 @@
-# ERA S5
+# ERA S6
 This is the assignment given in 5th Session, ERA batch of School of AI
 # Classification of MNIST Dataset
 In this session, the MNIST dataset has been used. It consists of 60,000 training images and 10,000 testing image.
