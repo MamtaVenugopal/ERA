@@ -47,7 +47,7 @@ Estimated Total Size (MB): 1.25
 In this assigment 99.4% validation accuracy has been achieved with 15K parameters
 within 20 epochs
 ```
-![img.png](img.png)
+![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/a3d7fd74-3d3e-4681-85e8-5bb29437cefc)
 ```
 # S6 Part 1 - BackPropagation 
 η = 0.1
