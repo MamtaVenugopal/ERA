@@ -51,22 +51,22 @@ within 20 epochs
 
 # S6 Part 1 - BackPropagation 
 
-η = 0.1                                       
+    η = 0.1                                       
 ![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/161df3d4-7861-4758-8627-972ea5067ca7)
 
-η = 0.2
+    η = 0.2
 ![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/c3052d79-214d-4ace-84a1-d5e1e81869c4)
 
-η = 0.5
+    η = 0.5
 ![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/0a8789b5-ae09-4817-bcc6-007e5b1d5261)
 
-η = 0.8
+    η = 0.8
 ![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/666501ae-8dcf-452a-aae6-b9194e77f8fb)
 
-η = 1.0
+    η = 1.0
 ![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/c84b96ca-7e57-49f2-ba0b-f5343b6b4de0)
 
-η = 2.0
+    η = 2.0
 ![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/7064f0d0-c688-414c-85bc-9fa58aac2213)
 
 
