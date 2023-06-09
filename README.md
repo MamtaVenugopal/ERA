@@ -46,6 +46,13 @@ Estimated Total Size (MB): 1.25
 # S6 Model Results
 In this assigment 99.4% validation accuracy has been achieved with 15K parameters
 within 20 epochs
-
+```
 ![img.png](img.png)
+```
+# S6 Part 1 - BackPropagation 
+η = 0.1
+```![Uploading image.png…]()
+```
+η = 0.2
+
 
