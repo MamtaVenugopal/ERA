@@ -70,6 +70,7 @@ Adding more parameters is the next strategy to increase the training accuracy to
 ![img_4.png](img_4.png)
 
 # S7 Model2 Summary 
+```
 ----------------------------------------------------------------
         Layer (type)               Output Shape         Param #
 ================================================================
@@ -112,7 +113,7 @@ Forward/backward pass size (MB): 0.65
 Params size (MB): 0.03
 Estimated Total Size (MB): 0.69
 ----------------------------------------------------------------
-
+```
 ### Target
 1. Create a skeleton for model 
 2. Increase the number of parameters for the model1 by increasing the convolutional layers
@@ -131,6 +132,7 @@ but hasn't achieved 99.4% accuracy. To increase the training accuracy, data augm
 ![img_3.png](img_3.png)
 
 # S7 Model3 Summary 
+```
 ----------------------------------------------------------------
         Layer (type)               Output Shape         Param #
 ================================================================
@@ -173,10 +175,10 @@ Forward/backward pass size (MB): 0.65
 Params size (MB): 0.03
 Estimated Total Size (MB): 0.69
 ----------------------------------------------------------------
+```
 ### Target
 1. Data augmentation for shifting some of hand-written digits by 8 deg has been introduced.
-2.
-3. Reach a receptive field of 20
+2. Reach a receptive field of 20
 ### Result
 Parameters : 7905
 Best Train Accuracy: 99.16%
@@ -188,6 +190,7 @@ reached the target accuracy consistently. Next, is to change the learning rate.
 ![img_8.png](img_8.png)
 
 # S7 Model4 Summary 
+```
 ----------------------------------------------------------------
         Layer (type)               Output Shape         Param #
 ================================================================
@@ -230,7 +233,7 @@ Forward/backward pass size (MB): 0.65
 Params size (MB): 0.03
 Estimated Total Size (MB): 0.69
 ----------------------------------------------------------------
-
+```
 ### Target
 1. Learning rate has been increased to 0.05 and scheduler has been setup in steps 6
 2. Reach a receptive field of more than 20
