@@ -10,7 +10,7 @@ Objective of this assignment
 In this session, the MNIST dataset has been used. It consists of 60,000 training images and 10,000 testing image.
 It is a large database of handwritten digits that is commonly used for training various image processing systems.
 It has all the same square size images of 28×28 pixels, and they are of grayscale.
-# S6 Part 2 - Project Structure
+# S7 Part 2 - Project Structure
 ```
 .
 ├── README.md
