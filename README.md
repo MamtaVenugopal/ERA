@@ -18,7 +18,6 @@ It has all the same square size images of 28×28 pixels, and they are of graysca
 ├── ERAS7_M2.ipynb
 ├── ERAS7_M3.ipynb
 ├── ERAS7_M4.ipynb
-├── ERAS7_M4_Final.ipynb
 ├── model.py
 ├── utils.py
 
