@@ -41,7 +41,17 @@ One cycle used for building model with accuracy above 90%
 
 ## Augmentated Images
 
-![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/5c91e610-1fa7-4d9b-86f2-66dd6562a79c)
+![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/1443f03b-ba75-4a09-8f12-262bc1ff5b84)
+
+
+
+
+
+
+
+
+
+
 
 
 ## new_model.py
