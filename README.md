@@ -43,19 +43,21 @@ One cycle used for building model with accuracy above 90%
 
 ![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/0ccb3eb4-68b5-4bf8-9f7c-7fc98d024eff)
 
+![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/ba1a1cbf-de13-46b3-91d6-78fc69791326)
+
+![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/65f1a3d3-c9ee-4534-838d-d71a8b69b9fd)
+
+![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/f76e5dcf-d06e-46de-9505-31f38c2bd80f)
+
+![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/650e8a38-f3d9-4b91-bb6f-9f9734197956)
+
+![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/08cbd281-0014-4969-a185-f5a76475b571)
+
+![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/53888ab7-6456-4d8b-9275-23498381bd74)
+
+![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/6fac42dc-1237-4493-950c-98b54072ec97)
 
 ![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/1443f03b-ba75-4a09-8f12-262bc1ff5b84)
-
-
-
-
-
-
-
-
-
-
-
 
 ## new_model.py
 
