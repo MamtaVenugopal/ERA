@@ -17,20 +17,31 @@ It has all the same square size images of 32X32 pixels, and they are colored ima
 
 ## S10.ipynb 
 This juputer notebook is the main program from where all other files like utils.py and models.py are called from. 
-Code is written for classification of MNIST dataset using pytorch. PyTorch is a fully featured framework for building deep 
+Code is written for classification of CIFAR10 dataset using pytorch. PyTorch is a fully featured framework for building deep 
 learning models, which is a type of machine learning that's commonly used in applications like image recognition and 
-language processing. Model optimization used in this notebook Stochastic Gradient Descent (SGD), variant of the Gradient Descent
-algorithm is used for optimizing model build with learning rate of 0.01 and scheduled learning rate of 0.1 every 20 epochs. 
-By comparing the actual labels to the projected values, loss is computed. This loss is backprogragated by updating the weights with
-gradients such that next iteration, the loss is reduced.
+language processing. Model optimization used in this notebook Adam.  
+Resnet like model used
+1. PrepLayer - Conv 3x3 s1, p1) >> BN >> RELU [64k]
+2. Layer1 -
+   X = Conv 3x3 (s1, p1) >> MaxPool2D >> BN >> RELU [128k]
+   R1 = ResBlock( (Conv-BN-ReLU-Conv-BN-ReLU))(X) [128k] 
+   Add(X, R1)
+3. Layer 2 - Conv 3x3 [256k],
+   MaxPooling2D
+   BN
+   ReLU
+4. Layer 3 -
+   X = Conv 3x3 (s1, p1) >> MaxPool2D >> BN >> RELU [512k]
+   R2 = ResBlock( (Conv-BN-ReLU-Conv-BN-ReLU))(X) [512k]
+   Add(X, R2)
+5. MaxPooling with Kernel Size 4
+6. FC Layer 
+7. SoftMax
+One cycle used for building model with accuracy above 90%
 
-## utils.py
-This file contains torch.utils.data.DataLoader and torch.utils.data.Dataset that allow you to use 
-pre-loaded datasets as well as your own data. Dataset stores the samples and their corresponding labels, 
-and DataLoader wraps an iterable around the Dataset to enable easy access to the samples.
-They are implemented in function named Dataloader that returns train dataset, test dataset, train dataloader and test dataloader.
-Along with function utils.py contains function for plotting the data.
-![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/cae992fc-3e41-4175-9464-b97570034845)
+## Augmentated Images
+
+![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/5c91e610-1fa7-4d9b-86f2-66dd6562a79c)
 
 
 ## new_model.py
@@ -85,21 +96,24 @@ Params size (MB): 2.26
 Estimated Total Size (MB): 2.94
 ----------------------------------------------------------------
 ```
-This model has been built with 2 blocks of 2 convoluted layer followed by maxpooling and finally with two layers of fully 
-connected. 
+This model has been built with custom resnet model
 ```
     def forward(self, x):
-        x = F.relu(self.conv1(x), 2) # 28>26 | 1>3 | 1>1
-        x = F.relu(F.max_pool2d(self.conv2(x), 2)) #26>24>12 | 3>5>6 | 1>1>2
-        x = F.relu(self.conv3(x), 2) # 12>10 | 6>10 | 2>2
-        x = F.relu(F.max_pool2d(self.conv4(x), 2)) # 10>8>4 | 10>14>16 | 2>2>4
-        x = x.view(-1, 4096) # 4*4*256 = 4096
-        x = F.relu(self.fc1(x))
-        x = self.fc2(x)
-        return F.log_softmax(x, dim=1)
+
+        preplayer = self.preplayer(x) 
+        x1 = self.x1(preplayer)
+        R1 = self.R1(x1)
+        layer1 = x1+R1
+        layer2 = self.layer2(layer1)
+        x2 = self.x2(layer2)
+        R2 = self.R2(x2)
+        layer3 = R2+x2
+        maxpool = self.pool(layer3)
+        x = maxpool.view(maxpool.size(0),-1)
+        fc = self.fc(x)
+        return F.log_softmax(fc.view(-1,10), dim=-1)
 ```
-# Augmentated Images
-![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/5c91e610-1fa7-4d9b-86f2-66dd6562a79c)
+
 
 ## Results
 MaxLR = 4.51E-02 with steepest gradient using LRFinder
@@ -111,5 +125,8 @@ Max at Epoch = 5
 LRMIN = 0.000451
 LRMAX = 0.002353737996777662
 NO Annihilation
+
+Accuracy without augmentation = 70.50% for training and 72% for testing dataset
+Accuracy with augmentation    = 91.82% for training and 90.51% for testing dataset
         
 
