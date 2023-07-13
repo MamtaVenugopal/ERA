@@ -41,6 +41,9 @@ One cycle used for building model with accuracy above 90%
 
 ## Augmentated Images
 
+![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/0ccb3eb4-68b5-4bf8-9f7c-7fc98d024eff)
+
+
 ![image](https://github.com/MamtaVenugopal/ERA/assets/42015212/1443f03b-ba75-4a09-8f12-262bc1ff5b84)
 
 
